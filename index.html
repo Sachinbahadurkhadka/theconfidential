@@ -3,275 +3,469 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sachin Khadka - Customer Service & Operations Leader</title>
+    <title>Sachin Khadka | Customer Service & Operations Leader</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --text: #333;
+            --text-light: #7f8c8d;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            --primary: #1a1a2e;
+            --secondary: #4cc9f0;
+            --light: #16213e;
+            --dark: #e6e6e6;
+            --text: #f1f1f1;
+            --text-light: #b8b8b8;
+            --white: #0f3460;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
+            background-color: var(--light);
+            color: var(--text);
             line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+            transition: var(--transition);
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         section {
-            padding: 60px 0;
+            padding: 80px 0;
         }
-        
+
         h1, h2, h3, h4 {
             margin-bottom: 20px;
-            color: #2c3e50;
+            color: var(--primary);
         }
-        
+
         p {
             margin-bottom: 15px;
+            color: var(--text);
         }
-        
-        ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
+
         a {
             text-decoration: none;
-            color: #3498db;
+            color: var(--secondary);
+            transition: var(--transition);
         }
-        
-        /* Header Styles */
+
+        a:hover {
+            color: var(--primary);
+        }
+
+        /* Header */
         header {
-            background-color: #2c3e50;
-            color: white;
+            background-color: var(--primary);
+            color: var(--white);
             padding: 20px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-size: 24px;
             font-weight: bold;
         }
-        
+
         .logo a {
-            color: white;
+            color: var(--white);
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
         }
-        
+
         .nav-links li {
             margin-left: 30px;
         }
-        
+
         .nav-links a {
-            color: white;
+            color: var(--white);
             font-weight: 500;
-            transition: color 0.3s;
         }
-        
+
         .nav-links a:hover {
-            color: #3498db;
+            color: var(--secondary);
         }
-        
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
         /* Hero Section */
         .hero {
-            background-color: #3498db;
-            color: white;
+            background-color: var(--secondary);
+            color: var(--white);
             text-align: center;
-            padding: 150px 0 100px;
+            padding: 180px 0 100px;
         }
-        
+
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
-            color: white;
+            color: var(--white);
         }
-        
+
         .hero p {
             font-size: 20px;
             max-width: 800px;
             margin: 0 auto 30px;
+            color: var(--white);
         }
-        
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: var(--white);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
         /* About Section */
         .about {
-            background-color: white;
+            background-color: var(--white);
         }
-        
+
         .about-content {
             display: flex;
             align-items: center;
             gap: 40px;
         }
-        
+
         .about-text {
             flex: 1;
         }
-        
+
         .about-image {
             flex: 0 0 300px;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
         }
-        
+
         .about-image img {
             width: 100%;
             height: auto;
             display: block;
         }
-        
+
         .highlight-box {
-            background-color: #f8f9fa;
-            border-left: 4px solid #3498db;
+            background-color: var(--light);
+            border-left: 4px solid var(--secondary);
             padding: 20px;
             margin: 30px 0;
         }
-        
+
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 20px;
         }
-        
+
         .skill-tag {
-            background-color: #e8f4fc;
-            color: #2c3e50;
-            padding: 5px 15px;
+            background-color: rgba(52, 152, 219, 0.1);
+            color: var(--secondary);
+            padding: 8px 15px;
             border-radius: 20px;
             font-size: 14px;
+            font-weight: 500;
         }
-        
+
+        /* Progress Bars */
+        .skill-item {
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background-color: var(--secondary);
+            border-radius: 5px;
+        }
+
         /* Experience Section */
         .experience {
-            background-color: #f8f9fa;
+            background-color: var(--light);
         }
-        
+
         .job {
-            background-color: white;
+            background-color: var(--white);
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--shadow);
             margin-bottom: 30px;
+            transition: var(--transition);
         }
-        
+
+        .job:hover {
+            transform: translateY(-5px);
+        }
+
         .job-header {
             display: flex;
             justify-content: space-between;
             margin-bottom: 15px;
+            cursor: pointer;
         }
-        
+
         .job-title {
             font-weight: 600;
-            color: #2c3e50;
+            color: var(--primary);
         }
-        
+
         .job-company {
             font-weight: bold;
-            color: #3498db;
+            color: var(--secondary);
         }
-        
+
         .job-duration {
-            color: #7f8c8d;
+            color: var(--text-light);
             font-size: 14px;
         }
-        
+
         .job-location {
-            color: #7f8c8d;
+            color: var(--text-light);
             font-size: 14px;
             margin-bottom: 15px;
         }
-        
+
         .job-description {
             margin-bottom: 15px;
         }
-        
+
+        .job-responsibilities {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .job.active .job-responsibilities {
+            max-height: 1000px;
+        }
+
         .job-responsibilities li {
             position: relative;
             padding-left: 20px;
+            margin-bottom: 8px;
         }
-        
+
         .job-responsibilities li:before {
             content: "▹";
             position: absolute;
             left: 0;
-            color: #3498db;
+            color: var(--secondary);
         }
-        
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--white);
+        }
+
+        .testimonial {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        /* Contact */
+        .contact {
+            background-color: var(--light);
+        }
+
+        .contact-form {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+        }
+
         /* Footer */
         footer {
-            background-color: #2c3e50;
-            color: white;
+            background-color: var(--primary);
+            color: var(--white);
             text-align: center;
             padding: 30px 0;
         }
-        
+
         .footer-content p {
             margin-bottom: 10px;
+            color: var(--white);
         }
-        
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
         }
-        
+
         .social-links a {
-            color: white;
+            color: var(--white);
             font-size: 20px;
-            transition: color 0.3s;
         }
-        
+
         .social-links a:hover {
-            color: #3498db;
+            color: var(--secondary);
         }
-        
-        /* Responsive Design */
+
+        /* Dark Mode Toggle */
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .dark-mode-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--primary);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: var(--transition);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
             .about-content {
                 flex-direction: column;
             }
-            
+
             .about-image {
                 margin-top: 30px;
             }
-            
+
             .hero h1 {
                 font-size: 36px;
             }
-            
+
             .hero p {
                 font-size: 18px;
             }
-            
-            .nav-links {
-                display: none;
+
+            section {
+                padding: 60px 0;
             }
         }
     </style>
@@ -290,6 +484,9 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </nav>
         </div>
     </header>
@@ -299,6 +496,7 @@
         <div class="container">
             <h1>Sachin Khadka</h1>
             <p>Dynamic Customer Service and Operations Leader with Over 7+ Years of Experience in Delivering Excellence</p>
+            <a href="#contact" class="btn">Get In Touch</a>
         </div>
     </section>
 
@@ -322,28 +520,80 @@
                     
                     <p>My intellectual curiosity drives me to continuously learn and embrace new opportunities. Whether unraveling intricate challenges, promoting team collaboration, or guiding diverse perspectives toward a unified vision, I thrive on creating meaningful impacts.</p>
                     <p>Beyond my professional pursuits, I enjoy meeting people, sharing perspectives, and exploring diverse experiences. These interactions enrich my journey and broaden my understanding of the world.</p>
-                    
-                    <h3>Specialties:</h3>
-                    <div class="skills">
-                        <span class="skill-tag">Operations Management</span>
-                        <span class="skill-tag">Logistics</span>
-                        <span class="skill-tag">E-commerce</span>
-                        <span class="skill-tag">Telecommunications</span>
-                        <span class="skill-tag">Customer Satisfaction</span>
-                        <span class="skill-tag">Strategy Planning</span>
-                        <span class="skill-tag">Process Improvement</span>
-                        <span class="skill-tag">Data Visualization</span>
-                        <span class="skill-tag">Leadership Development</span>
-                        <span class="skill-tag">Talent Mobilization</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Power BI</span>
-                    </div>
                 </div>
                 <div class="about-image">
-
-
-                    <img src="https://github.com/Sachinbahadurkhadka/10/blob/SachinWorkSpace/images/Untitled%20design.png" alt="Sachin Khadka">
+                    <img src="https://github.com/Sachinbahadurkhadka/theconfidential/blob/SachinWorkSpace/images/Untitled%20design.png?raw=true" alt="Sachin Khadka">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2>Technical & Professional Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Operations Management</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Customer Experience</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>SQL</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Power BI</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Team Leadership</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Specialties:</h3>
+            <div class="skills">
+                <span class="skill-tag">Operations Management</span>
+                <span class="skill-tag">Logistics</span>
+                <span class="skill-tag">E-commerce</span>
+                <span class="skill-tag">Telecommunications</span>
+                <span class="skill-tag">Customer Satisfaction</span>
+                <span class="skill-tag">Strategy Planning</span>
+                <span class="skill-tag">Process Improvement</span>
+                <span class="skill-tag">Data Visualization</span>
+                <span class="skill-tag">Leadership Development</span>
+                <span class="skill-tag">Talent Mobilization</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Power BI</span>
             </div>
         </div>
     </section>
@@ -379,26 +629,6 @@
                     <li>Established and tracked KPIs for the team, monitoring performance standards and executing performance improvement plans to elevate service delivery.</li>
                     <li>Monitor order forecasts and optimize scheduling for a team of 50+ customer service representatives and 300+ riders, significantly reducing operational costs and improving service efficiency through data-driven scheduling and insights.</li>
                 </ul>
-                <div class="skills">
-                    <span class="skill-tag">Customer Satisfaction</span>
-                    <span class="skill-tag">Communication</span>
-                    <span class="skill-tag">Customer Service</span>
-                    <span class="skill-tag">Support Management</span>
-                    <span class="skill-tag">Communication Training</span>
-                    <span class="skill-tag">Data Analysis</span>
-                    <span class="skill-tag">Workforce Planning</span>
-                    <span class="skill-tag">Team Management</span>
-                    <span class="skill-tag">Team Building</span>
-                    <span class="skill-tag">Customer Service Operations</span>
-                    <span class="skill-tag">Attention to Detail</span>
-                    <span class="skill-tag">Benchmarking</span>
-                    <span class="skill-tag">Interpersonal Skills</span>
-                    <span class="skill-tag">Timelines</span>
-                    <span class="skill-tag">Rostering</span>
-                    <span class="skill-tag">Commerce</span>
-                    <span class="skill-tag">Customer Support</span>
-                    <span class="skill-tag">Customer Service Management</span>
-                </div>
             </div>
             
             <!-- Foodmandu - Assistant Operations Manager -->
@@ -425,29 +655,6 @@
                     <li>Develop and implement strategies for operational efficiency, setting clear goals and ensuring their achievement through process optimization and team alignment.</li>
                     <li>Created and implemented SOPs and KPIs aligned with departmental goals, driving process improvements and enhancing overall operational performance.</li>
                 </ul>
-                <div class="skills">
-                    <span class="skill-tag">Customer Satisfaction</span>
-                    <span class="skill-tag">Communication</span>
-                    <span class="skill-tag">Customer Relationship Management (CRM)</span>
-                    <span class="skill-tag">Operations Management</span>
-                    <span class="skill-tag">Communication Training</span>
-                    <span class="skill-tag">Data Analysis</span>
-                    <span class="skill-tag">Workforce Planning</span>
-                    <span class="skill-tag">Leadership</span>
-                    <span class="skill-tag">Operations Administration</span>
-                    <span class="skill-tag">Counseling</span>
-                    <span class="skill-tag">Team Building</span>
-                    <span class="skill-tag">Coaching</span>
-                    <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag">Attention to Detail</span>
-                    <span class="skill-tag">Benchmarking</span>
-                    <span class="skill-tag">Interpersonal Skills</span>
-                    <span class="skill-tag">Timelines</span>
-                    <span class="skill-tag">Rostering</span>
-                    <span class="skill-tag">Commerce</span>
-                    <span class="skill-tag">Strategic Thinking</span>
-                    <span class="skill-tag">Teamwork</span>
-                </div>
             </div>
             
             <!-- Executive Assistant to Head Service Operations -->
@@ -471,114 +678,24 @@
                     <li>Demonstrated excellent communication skills, both internally and externally, facilitating smooth operations and ensuring alignment between teams and leadership.</li>
                     <li>Played a key role in enhancing team performance by providing strategic support, offering solutions for operational challenges, and improving overall workflow.</li>
                 </ul>
-                <div class="skills">
-                    <span class="skill-tag">Customer Satisfaction</span>
-                    <span class="skill-tag">Communication</span>
-                    <span class="skill-tag">Communication Training</span>
-                    <span class="skill-tag">Workforce Planning</span>
-                    <span class="skill-tag">Team Building</span>
-                    <span class="skill-tag">Coaching</span>
-                    <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag">Attention to Detail</span>
-                    <span class="skill-tag">Interpersonal Skills</span>
-                    <span class="skill-tag">Timelines</span>
-                    <span class="skill-tag">Rostering</span>
-                    <span class="skill-tag">Commerce</span>
-                    <span class="skill-tag">Strategic Thinking</span>
-                    <span class="skill-tag">Teamwork</span>
-                </div>
-            </div>
-            
-            <!-- Operations Incharge -->
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <h3 class="job-title">Operations Incharge</h3>
-                        <h4 class="job-company">Foodmandu</h4>
-                    </div>
-                    <div class="job-duration">Jul 2019 - Jul 2020 · 1 yr 1 mo</div>
-                </div>
-                <div class="job-location">Kathmandu, Bāgmatī, Nepal</div>
-                <ul class="job-responsibilities">
-                    <li>Maintained constant communication with management, staff, and restaurants to ensure smooth operational workflow and alignment with organizational goals.</li>
-                    <li>Developed and implemented quality assurance protocols, ensuring adherence to standards and consistency in operations.</li>
-                    <li>Streamlined organizational processes, driving improvements to enhance operational efficiency and sustain the company's internal capacity.</li>
-                    <li>Ensured that all operational activities were completed on time, improving task management and meeting deadlines effectively.</li>
-                    <li>Tracked staffing requirements and ensured proper resource allocation to optimize team efficiency and reduce operational gaps.</li>
-                    <li>Led the training, grooming, and mobilization of newly recruited team members, ensuring their seamless integration into the operational process.</li>
-                    <li>Guided team members by providing immediate, actionable feedback and instructions, enabling high performance and quick issue resolution.</li>
-                    <li>Helped promote a company culture that encourages high morale and top performance, enhancing employee satisfaction and retention.</li>
-                    <li>Allocated tasks and assignments to Customer Service Representatives (CSRs) and other internal staff based on their strengths and operational needs, optimizing team productivity.</li>
-                </ul>
-                <div class="skills">
-                    <span class="skill-tag">Customer Satisfaction</span>
-                    <span class="skill-tag">Communication</span>
-                    <span class="skill-tag">Workforce Planning</span>
-                    <span class="skill-tag">Department Supervision</span>
-                    <span class="skill-tag">Leadership</span>
-                    <span class="skill-tag">Operations Administration</span>
-                    <span class="skill-tag">Counseling</span>
-                    <span class="skill-tag">Team Building</span>
-                    <span class="skill-tag">Coaching</span>
-                    <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag">Attention to Detail</span>
-                    <span class="skill-tag">Interpersonal Skills</span>
-                    <span class="skill-tag">Operations Support</span>
-                    <span class="skill-tag">Rostering</span>
-                    <span class="skill-tag">Commerce</span>
-                    <span class="skill-tag">Strategic Thinking</span>
-                    <span class="skill-tag">Operational Execution</span>
-                    <span class="skill-tag">Teamwork</span>
-                </div>
-            </div>
-            
-            <!-- Customer Service Representative -->
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <h3 class="job-title">Customer Service Representative</h3>
-                        <h4 class="job-company">Foodmandu</h4>
-                    </div>
-                    <div class="job-duration">Jul 2018 - Jul 2019 · 1 yr 1 mo</div>
-                </div>
-                <div class="job-location">Kathmandu, Bāgmatī, Nepal</div>
-                <ul class="job-responsibilities">
-                    <li>Served customers by providing detailed product and service information and assisting with their requests through both inbound and outbound communications.</li>
-                    <li>Supported potential procurement by facilitating communication and coordination with internal teams to streamline customer needs.</li>
-                    <li>Maintained accurate customer records by updating essential information and ensuring proper documentation in all necessary situations.</li>
-                    <li>Resolved product or service issues by thoroughly understanding customer concerns and providing clear, effective solutions in a timely manner.</li>
-                    <li>Successfully completed the entire service process for customers, ensuring satisfaction and issue resolution from start to finish.</li>
-                    <li>Recommended additional products or services to customers based on their needs, increasing sales opportunities and customer satisfaction.</li>
-                    <li>Contributed to team success by consistently achieving related performance goals and delivering high-quality customer service in a professional manner.</li>
-                </ul>
-                <div class="skills">
-                    <span class="skill-tag">Customer Satisfaction</span>
-                    <span class="skill-tag">Communication</span>
-                    <span class="skill-tag">Customer Service</span>
-                    <span class="skill-tag">Workforce Planning</span>
-                    <span class="skill-tag">Customer Relations</span>
-                    <span class="skill-tag">Counseling</span>
-                    <span class="skill-tag">Coaching</span>
-                    <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag">Attention to Detail</span>
-                    <span class="skill-tag">Interpersonal Skills</span>
-                    <span class="skill-tag">Timelines</span>
-                    <span class="skill-tag">Customer Service Representatives</span>
-                    <span class="skill-tag">Commerce</span>
-                    <span class="skill-tag">Customer Support</span>
-                    <span class="skill-tag">Teamwork</span>
-                </div>
             </div>
         </div>
     </section>
+
+   
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2>Get In Touch</h2>
             <p>I'm always interested in hearing about new opportunities and collaborations. Feel free to reach out!</p>
-            <p>Email: <a href="mailto:iamsahcinkhadka@gmail.com">iamsahcinkhadka@gmail.com</a></p>
-            <p>Phone: +977 9860141775</p>
+            
+    
+            
+            <div style="margin-top: 30px;">
+                <p>Email: <a href="mailto:iamsachinkhadka@gmail.com">iamsachinkhadka@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/sachinbahadurkhadka/" target="_blank">Sachin Bahadur Khadka</a></p>
+            </div>
         </div>
     </section>
 
@@ -589,14 +706,80 @@
                 <p>&copy; 2024 Sachin Khadka. All rights reserved.</p>
                 <p>Manager - Customer Service at Foodmandu</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sachinbahadurkhadka/"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Collapsible Job Sections
+        const jobs = document.querySelectorAll('.job');
+
+        jobs.forEach(job => {
+            const header = job.querySelector('.job-header');
+            header.addEventListener('click', () => {
+                job.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            // Change icon
+            const icon = darkModeToggle.querySelector('i');
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+            
+            // Save preference to localStorage
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('dark-mode') === 'true') {
+            body.classList.add('dark-mode');
+            const icon = darkModeToggle.querySelector('i');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+    </script>
 </body>
 </html>
